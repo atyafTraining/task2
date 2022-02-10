@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+body{
+    background-color: #E5E5E5;
+    font-family: 'Nunito', sans-serif;
+    margin: 0 !important;
+}
+.Allcontant{
+    margin-left: 19.4%;
+    width: 100%;
+}
+
+.NameLogo{
+    font-size: 24px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+
+
+
+
+
+
+.sideflexd{
+    position: fixed;
+    width: 218px;
+    height: 1047px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+}
+
+.square{
+    position: absolute;
+    width: 168px;
+    height: 161px;
+    background: #80ABFF;
+    opacity: 0.1;
+    border-radius: 20px;
+}
+.padding50{
+    padding-top: 42px;
+    padding-left: 42px;
+    padding-bottom: 55px;
+}
+.paddingleft{
+    padding-left: 30px;
+
+}
+span {
+    margin-left: 13px;
+    font-size:16px;
+    color: #030229;
+    font-weight: 600;
+    line-height: 21.82px;
+    opacity: 0.5;
+    font-style: normal;
+    margin-bottom: 32px;
+}
+
+
+.ss{
+    width: 50px;
+    height: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /*  Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.flexedRow{
+    position: fixed;
+    width: 100%;
+}
+.sewar{
+
+}
