@@ -1,30 +1,55 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import {Form, Button, Col, Container,Nav, Stack, Row} from 'react-bootstrap';
-import SideBar from "./Component/SideBar";
+import React, {Fragment, useState, Component} from "react";
+import Sidebar from "./Component/sidebarLeftfexd/sidebar";
+import {Container, InputGroup, Row, Stack} from "react-bootstrap";
+import WithFilter from "./Component/contentoneBage/datatable";
+import 'react-datepicker/dist/react-datepicker.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import'bootstrap-css-only/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
+import Topfixid from "./Component/navbartopfixed/topfixid";
+import {TitelTop} from "./Component/navbartopfixed/titelTop";
+import PureComponent from "./Component/contentoneBage/chart";
+import Datatable from "./Component/contentoneBage/datatable";
+
 
 export default function Home() {
-  return (
-      <>
-          <Container fluid>
-              <Row>
-                  <Col sm={2} className=" h-100 bg-white position-fixed">
-                      <SideBar />
 
-                  </Col>
-                  <Col sm={10} className=" h-25 position-fixed">
-                      <Row className="flex-row bg-light w-100 h-25 Allcontant">tttttt</Row>
-                      <Row className="flex-row bg-danger w-100 Allcontant" ></Row>
-                  </Col>
-              </Row>
-          </Container>
-
-          <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
-          <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
-          <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+    return (
+        <Container fluid className="body m-0 p-0">
+            <Sidebar />
+            <Topfixid />
+            <TitelTop />
+            <PureComponent />
+            <div className="ps-5 w-50" style={{marginLeft:"155px"}}><Datatable /></div>
 
 
-      </>
-  )
+
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+        </Container>
+
+
+
+
+    )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
