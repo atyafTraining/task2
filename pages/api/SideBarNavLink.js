@@ -3,7 +3,6 @@ import Image from 'react-bootstrap/Image'
 import { useEffect, useState } from 'react'
 import { Stack } from 'react-bootstrap'
 import React from 'react';
-// import './scrollbar.css';
 export default function SideBarNavLink() {
     const TotalList = [
         { icon: "Dashboard.svg", name: "Dashboard", list: ["Line Chart.", "Vertical Bar Chart.", "Horizontal Bar Chart.","Donut.","Funnel."] },
@@ -29,9 +28,6 @@ export default function SideBarNavLink() {
 
     return (<>
         <ul className=' px-4'>
-            <li>
-
-            </li>
             {
                 TotalList.map(
                     function X(i){
@@ -47,7 +43,8 @@ export default function SideBarNavLink() {
                                         && <ul >
                                             {
                                                 i.list.map(
-                                                    function ListUl(y) {
+                                                    function ListUl(y)
+                                                    {
                                                         return (<>
                                                             <li className='text-start mt-1 fs-6 ps-2'>{y}</li>
                                                         </>)
@@ -62,7 +59,8 @@ export default function SideBarNavLink() {
                     }
                 )
             }
-        </ul></>)
-
+        </ul>
+    </>
+    )
 }
 

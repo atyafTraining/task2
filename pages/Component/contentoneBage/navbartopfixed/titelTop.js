@@ -25,28 +25,21 @@ export function TitelTop() {
         }
     ]
     return (
-        <Container fluid className="px-0">
-
-            <Row className=" Navbar text-center align-content-center justify-content-center  m-0">
+            <Row className="g-4  m-0 ">
                 {Data.map(
 
                     function X(item) {
                         return (
                             <>
-                                <Col xs={12} md={3} xxl  gap={3} className="">
-                                    <Stack className=" bg-white pt-3 text-center align-content-center justify-content-center "  direction="horizontal" >
-                                        {/*<Stack>*/}
-                                            <Image src={"/imges/icon/" + item.icon} width={60} height={60} />
-                                        {/*</Stack>*/}
-                                        <div className="text-end" >
-                                            <h1 className="number">{item.Number}</h1>
-                                            <p className="title ">{item.name}</p>
+                                <Col className='p-3' xs={12} md={6} lg={3}>
+                                    <Stack className=" align-items-center gap-3  bg-white p-4  "  direction="horizontal" >
+                                        <Image src={"/imges/icon/" + item.icon} width={60} height={60} />
+                                        <div>
+                                            <h3 className="mb-0 fw-bold">{item.Number}</h3>
+                                            <p className="mb-0 opacity-50">{item.name}</p>
                                         </div>
                                     </Stack>
-
                                 </Col>
-
-
 
                             </>
                         )
@@ -54,6 +47,5 @@ export function TitelTop() {
                 )}
             </Row>
 
-        </Container>
     )
 }

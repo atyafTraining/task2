@@ -9,11 +9,6 @@ export default function Datatable() {
       {
         label: "Tracking no",
         field: "trackingno",
-
-        attributes: {
-          "aria-controls": "DataTable",
-          "aria-label": "Tracking no",
-        },
       },
       {
         label: "Product Name",
@@ -21,19 +16,19 @@ export default function Datatable() {
         width: 270,
       },
       {
-        label: "Price ",
-        field: "Price ",
+        label: "Price",
+        field: "Price",
         width: 100,
       },
       {
-        label: "Total Order ",
-        field: "totalOrder ",
+        label: "Total Order",
+        field: "totalOrder",
         sort: "asc",
         width: 100,
       },
       {
         label: "Total Amount",
-        field: "date",
+        field: "TotalAmount",
         sort: "disabled",
         width: 150,
       },
@@ -42,67 +37,60 @@ export default function Datatable() {
       {
         trackingno: "#876364",
         ProductName: (
-            <Stack className="pt-3" direction="horizontal" gap={2}>
-              <Image src="/img/table/Rectangle91.png" width={30} height={30} />
+            <Stack direction="horizontal" gap={2}>
+              <Image src="/imges/table/Rectangle91.png" width={30} height={30} />
               Camera Lens
             </Stack>
         ),
-        Price:  "$170",
-        totalOrder: "63",
-        date: "2011/07/25",
+        Price:  "$178",
+        totalOrder: "325",
+        TotalAmount: "$1,46,660",
 
       },
       {
-        name: "#876368",
+          trackingno: "#876368",
         ProductName: (
             <Stack  direction="horizontal" gap={2}>
-              <Image src="/img/table/Rectangle110.png" width={30} height={30} />
-              Camera Lens
+              <Image src="/imges/table/Rectangle110.png" width={30} height={30} />
+              Black Sleep Dress
             </Stack>
         ),
-        office: "Singapore",
-        age: "64",
-        date: "2012/04/09",
-        salary: "$138",
+        Price:  "$14",
+        totalOrder: "53",
+        TotalAmount: "$46,660",
+
       },
       {
-        name: "#876412",
+          trackingno: "#876412",
         ProductName: (
             <Stack direction="horizontal" gap={2}>
               <Image src="/imges/table/Rectangle111.png" width={30} height={30} />
-              Camera Lens
+              Argan Oil
             </Stack>
         ),
-        office: "New York",
-        age: "63",
-        date: "2010/01/04",
-        salary: "$125",
+          Price:  "$21",
+          totalOrder: "78",
+          TotalAmount: "$3,46,676",
       },
       {
-        name: "#876621 ",
+          trackingno: "#876621",
         ProductName: (
             <Stack direction="horizontal" gap={2}>
               <Image src="/imges/table/Rectangle90.png" width={30} height={30} />
-              Camera Lens
+                EAU DE Parfum
             </Stack>
         ),
-        office: "San Francisco",
-        age: "56",
-        date: "2012/06/01",
-        salary: "$115",
+        Price:  "$32",
+        totalOrder: "98",
+        TotalAmount: "$3,46,981",
+
       },
     ],
   });
 
   return (
       <MDBDataTableV5
-          className="m-5"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 1)",
-            height: "335px",
-            width: "719px",
-            borderRadius: "10px",
-          }}
+          className="text-center bg-white"
           hover
           data={datatable}
           filter="office"

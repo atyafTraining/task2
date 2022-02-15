@@ -1,8 +1,6 @@
-import '../styles/globals.css'
-import '../styles/indexcss.css'
+//import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import "react-datepicker/dist/react-datepicker.css";
-
+import '../styles/indexcss.css'
 
 
 function MyApp({ Component, pageProps }) {

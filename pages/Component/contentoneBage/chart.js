@@ -97,20 +97,10 @@ export default class Example extends PureComponent {
 
         return (
             <>
-                <div className="bg-white" style={{width :"719px",Height :"408px",marginLeft:"248px"}}>
-                    <h3 className="pb-3 fw-bold ps-5 pt-4" style ={{ color:"rgba(3, 2, 41, 1) ",fontSize:"18px"}}>Reports</h3>
+                <div className="bg-white">
+                    <h3 className="pb-3 fw-bold ps-5 pt-4" style ={{ color:"rgba(3, 2, 41, 1)",fontSize:"18px"}}>Reports</h3>
                     <ResponsiveContainer width="100%" height={300}>
-                        <LineChart
-                            width={500}
-                            height={300}
-                            data={data}
-                            margin={{
-                                top: 5,
-                                right: 30,
-                                left: 20,
-                                bottom: 5,
-                            }}
-                        >
+                        <LineChart data={data} >
                             <CartesianGrid strokeDasharray="3 3" />
                             <XAxis dataKey="name" />
                             <YAxis />
@@ -126,3 +116,36 @@ export default class Example extends PureComponent {
         );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

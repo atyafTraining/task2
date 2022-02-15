@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+:root{
+    --widthsidebarvar:218px;
+    --borderRadius:10px;
+}
 .body{
     background-color: #E5E5E5;
     font-family: 'Nunito', sans-serif;
     margin: 0 !important;
     font-weight: 600;
+
 }
+
+
 .mainSidebar .nav ul li {
     cursor: pointer;
     list-style-type: none;
-    font-style: normal;
     font-size: 16px;
     line-height: 22px;
     color: #030229;
     opacity: 0.6;
+    font-weight: 600;
 }
 .mainSidebar .nav ul li:not(.active) ul {
     list-style: none;
@@ -23,17 +29,20 @@
     font-size: 14px;
 }
 .mainSidebar {
-    overflow-x: hidden;
-    text-align: center;
-    height: 100%;
-    position: fixed;
-    top:0;
-    left: 0;
     background-color: #FFFFFF;
+    width: var(--widthsidebarvar);
 }
-.Sidebarfooter {
-    width: inherit;
+
+
+
+
+
+.paddingsidebar{
+    padding-left: var(--widthsidebarvar);
 }
+
+
+
 .userAccount{
     font-size: 10px;
     font-family: 'Nunito', sans-serif;
@@ -50,12 +59,7 @@
 }
 
 
-
-
-
-
-
- /*Navbar*/
+/Navbar/
 .Navbar{
     padding-top:98px;
     align-items: center;
@@ -66,28 +70,12 @@
     opacity: 70%;
     font-family: 'Nunito', sans-serif;
 }
-.number{
-    opacity:70% ;
-    font-weight: 800;
-    font-size: 22px;
-    line-height: 30.01px;
-    color:rgba(0, 0, 0, 1) ;
-    display: flex;
-}
+
 .bg-white {
     margin-top: 20px;
     border-radius: 10px;
 }
 .text-end{
-padding-left: 10px;
+    padding-left: 10px;
 }
-
-.Topfexed{
-    padding-left: 218px;
-    backgroundColor:#E5E5E5;
-}
-
-
-
-
 
