@@ -1,4 +1,5 @@
 :root{
+    --bs-body-bg:#d81919;
     --widthsidebarvar:218px;
     --borderRadius:10px;
 }
@@ -58,14 +59,8 @@
     background-color: black;
 }
 
-
 /Navbar/
-.Navbar{
-    padding-top:98px;
-    align-items: center;
-    padding-left: 218px;
 
-}
 .title{
     opacity: 70%;
     font-family: 'Nunito', sans-serif;
@@ -75,7 +70,3 @@
     margin-top: 20px;
     border-radius: 10px;
 }
-.text-end{
-    padding-left: 10px;
-}
-

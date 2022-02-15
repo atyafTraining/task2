@@ -3,7 +3,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 import {  Stack} from 'react-bootstrap';
 
 const data = [
-
     {
         name: '10am',
         uv: 2780,

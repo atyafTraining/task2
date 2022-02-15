@@ -96,9 +96,7 @@ export default function Datatable() {
           filter="office"
           proSelect
           searchBottom={false}
-          data={datatable} border="0" cellspacing="0" cellpadding="0" filter="office" proSelect sortBottom={true} scrollX={true} 
-
-
+          data={datatable} border="0" cellspacing="0" cellpadding="0" filter="office" proSelect sortBottom={true} scrollX={true}
       />
   );
 }
