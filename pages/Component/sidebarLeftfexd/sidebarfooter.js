@@ -7,7 +7,7 @@ export default function Sidebarfooter() {
 
         //
         // <>
-        //     <Stack direction="horizontal" gap={2} className="user-large p-4 ">
+        //     <Stack direction={{md:"horizontal"}} gap={2} className="user-large p-4 ">
         //         <div className="" style={{backgroundImage:"url('/imges/users/Rectangle 114.png')"}}>
         //             <Image src="/imges/users/Rectangle 115.png" width={45} height={43}/>
         //         </div>

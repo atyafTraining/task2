@@ -7,7 +7,7 @@ import Panel from "../Panel";
 const DatePickercom =() => {
     const [startDate,setStartDate] = useState(new Date());
     const ExampleCustomInput = forwardRef(({ value, onClick }, ref) => (
-            <div  style={{width:"130px",height:"33px"}}>
+            <div className="datepicker-container" style={{width:"130px",height:"33px"}}>
                 <Panel>
                     <Button  className="w-100 example-custom-input btn-white p-2 px-4" style={{backgroundColor:"white",color:"black" }} onClick={onClick} ref={ref}>
                         {value}

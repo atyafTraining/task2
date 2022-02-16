@@ -1,32 +1,32 @@
 :root {
     --bs-body-bg: #E5E5E5;
     --widthsidebarvar: 218px;
+    --minwidthsidebarvar: 80px;
     --borderRadius: 10px;
     --bs-body-font-family: 'Nunito';
     --font-weight: 600;
 }
 
-.mainSidebar .nav ul li {
-    cursor: pointer;
-    list-style-type: none;
-    font-size: 16px;
-    line-height: 22px;
-    color: #030229;
-    opacity: 0.6;
-    font-weight: 600;
-}
-.mainSidebar .nav ul li:not(.active) ul {
-    list-style: none;
-    display: none;
-}
-.mainSidebar .nav ul li ul {
-    list-style-type: none;
-    font-size: 14px;
-}
-.mainSidebar {
-    background-color: #FFFFFF;
-    width: var(--widthsidebarvar);
-}
+/*.mainSidebar .nav ul li {*/
+/*    cursor: pointer;*/
+/*    list-style-type: none;*/
+/*    font-size: 16px;*/
+/*    line-height: 22px;*/
+/*    color: #030229;*/
+/*    opacity: 0.6;*/
+/*    font-weight: 600;*/
+/*}*/
+/*.mainSidebar .nav ul li:not(.active) ul {*/
+/*    list-style: none;*/
+/*    display: none;*/
+/*}*/
+/*.mainSidebar .nav ul li ul {*/
+/*    list-style-type: none;*/
+/*    font-size: 14px;*/
+/*}*/
+/*.mainSidebar {*/
+
+/*}*/
 .item:hover,.item.active{
     background: linear-gradient(to right, rgba(172, 169, 255, 1),rgba(172, 169, 255, 0))
 }
@@ -98,30 +98,18 @@
 
 
 .mainSidebar {
-    width: 218px;
+    background-color: #FFFFFF;
+    width: var(--widthsidebarvar);
 }
 .sidebar-active .mainSidebar {
-    width: 80px;
-    height: 925px;
+    width: var(--minwidthsidebarvar);
+    height: auto !important;
     border-radius: 20px;
-    margin: 24px;
-}
-.sidebar-active .user1{
-    padding: 0!important;
-    display: flex;
-    flex-direction:column !important;
-    padding: 20px!important;
-}
-.sidebar-active .user2 {
-    display: none;
-}
-.user1 {
-    display: flex;
-    padding: 0!important;
-    flex-direction:row !important;
-    padding: 20px!important;
-}
+    left: 24px;
+    top: 24px !important;
+    bottom: 24px;
 
+}
 .sidebar-active .item1 {
     display: none;
 }
@@ -136,14 +124,9 @@
 .sidebar-active .user-small{
     display: block;
 }
-.user-small,.sidebar-active .user-large ,.sidebar-active .ullist{
+.user-small,.sidebar-active .user-large ,.sidebar-active .ullist ,
+.mainSidebar ul li:not(.active) .ullist {
     display: none;
-}
-.base-active {
-    padding-left: 20px!important;
-}
-.sidebar-active .base-active {
-    padding-left: 0px!important;
 }
 .sidebar-active .icon1 {
     position:absolute;
@@ -155,5 +138,38 @@
     top: 50px;
     right: 10px;
 }
+
+@media (max-width: 768px) {
+    .mainSidebar {
+        width: 80px;
+    }
+    .react-datepicker-wrapper button,
+    .react-datepicker-wrapper .datepicker-container{
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

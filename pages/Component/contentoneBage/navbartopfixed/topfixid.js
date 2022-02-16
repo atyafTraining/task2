@@ -12,11 +12,11 @@ export default function Topfixid() {
                     <h3>Dashboard</h3>
 
                 </Col>
-                <Col xs="auto">
+                <Col xs={6} md={"auto"}>
                     <DatePickercom />
 
                 </Col>
-                <Col xs="auto" className="ms-auto ms-md-0">
+                <Col xs={6} md={"auto"} >
                     <DatePickercom />
                 </Col>
 
