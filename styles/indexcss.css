@@ -1,16 +1,10 @@
-:root{
-    --bs-body-bg:#d81919;
-    --widthsidebarvar:218px;
-    --borderRadius:10px;
+:root {
+    --bs-body-bg: #E5E5E5;
+    --widthsidebarvar: 218px;
+    --borderRadius: 10px;
+    --bs-body-font-family: 'Nunito';
+    --font-weight: 600;
 }
-.body{
-    background-color: #E5E5E5;
-    font-family: 'Nunito', sans-serif;
-    margin: 0 !important;
-    font-weight: 600;
-
-}
-
 
 .mainSidebar .nav ul li {
     cursor: pointer;
@@ -35,13 +29,10 @@
 }
 
 
-
-
-
 .paddingsidebar{
-    padding-left: var(--widthsidebarvar);
-}
+    padding: 24px 24px 24px calc(var(--widthsidebarvar) + 24px);
 
+}
 
 
 .userAccount{
@@ -67,6 +58,14 @@
 }
 
 .bg-white {
-    margin-top: 20px;
     border-radius: 10px;
+}
+.example-custom-input  {
+    margin: 0!important;
+}
+.mdb-datatable div .d-flex{
+    display: none!important;
+}
+.Top1:not(:last-child) {
+    border-bottom: 1px solid #b4b4b66c ;
 }

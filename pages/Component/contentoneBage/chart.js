@@ -96,8 +96,6 @@ export default class Example extends PureComponent {
 
         return (
             <>
-                <div className="bg-white">
-                    <h3 className="pb-3 fw-bold ps-5 pt-4" style ={{ color:"rgba(3, 2, 41, 1)",fontSize:"18px"}}>Reports</h3>
                     <ResponsiveContainer width="100%" height={300}>
                         <LineChart data={data} >
                             <CartesianGrid strokeDasharray="3 3" />
@@ -108,8 +106,6 @@ export default class Example extends PureComponent {
                             <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{ r: 8 }} />
                         </LineChart>
                     </ResponsiveContainer>
-
-                </div>
 
             </>
         );

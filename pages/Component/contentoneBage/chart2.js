@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
-
+import { Stack } from "react-bootstrap";
 const data = [
     { name: 'Group A', value: 400 },
     { name: 'Group B', value: 300 },
@@ -9,28 +9,48 @@ const data = [
 ];
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
-export default class Example extends PureComponent {
-    static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
+const RADIAN = Math.PI / 180;
+const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.25;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
-    render() {
-        return (
-            <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
-                <Pie
-                    data={data}
-                    cx={120}
-                    cy={200}
-                    innerRadius={60}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    paddingAngle={5}
-                    dataKey="value"
-                >
-                    {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                </Pie>
+    return (
+        <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
+            {`${(percent * 100).toFixed(0)}%`}
+        </text>
+    );
+};
 
-            </PieChart>
-        );
-    }
+export default function PieCharts(){
+
+
+
+
+    return(
+            <ResponsiveContainer width="100%" height={300}>
+
+                <PieChart className="  overflow-hidden" width={300} height={375}>
+                    <Pie
+                        className=" overflow-hidden"
+                        data={data}
+                        cx={210}
+                        cy={180}
+                        innerRadius={35}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        paddingAngle={5}
+                        dataKey="value"
+                        label={renderCustomizedLabel}
+                    >
+                        {data.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        ))}
+                    </Pie>
+                </PieChart>
+            </ResponsiveContainer>
+
+    )
+
+
 }

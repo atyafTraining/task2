@@ -25,13 +25,13 @@ export function TitelTop() {
         }
     ]
     return (
-            <Row className="g-4  m-0 ">
+            <Row className="g-4  mb-4">
                 {Data.map(
 
                     function X(item) {
                         return (
                             <>
-                                <Col className='p-3' xs={12} md={6} lg={3}>
+                                <Col xs={12} md={6} lg>
                                     <Stack className=" align-items-center gap-3  bg-white p-4  "  direction="horizontal" >
                                         <Image src={"/imges/icon/" + item.icon} width={60} height={60} />
                                         <div>

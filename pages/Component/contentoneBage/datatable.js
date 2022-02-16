@@ -9,6 +9,7 @@ export default function Datatable() {
       {
         label: "Tracking no",
         field: "trackingno",
+        width: 100,
       },
       {
         label: "Product Name",
@@ -89,14 +90,15 @@ export default function Datatable() {
   });
 
   return (
-      <MDBDataTableV5
-          className="text-center bg-white"
+      <>
+
+  <MDBDataTableV5
+
+          className="text-center"
           hover
-          data={datatable}
-          filter="office"
-          proSelect
-          searchBottom={false}
-          data={datatable} border="0" cellspacing="0" cellpadding="0" filter="office" proSelect sortBottom={true} scrollX={true}
+
+          searchBottom={false} data={datatable} border="0" cellSpacing="0" cellpadding="0" filter="office" proSelect sortBottom={true} scrollX={true}
       />
+      </>
   );
 }

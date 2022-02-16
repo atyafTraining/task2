@@ -10,11 +10,11 @@ export default function Topfixid() {
              <Stack direction="horizontal"  gap={3}>
                  <div className="pt-4 ms-3 "><h3>Dashboard</h3></div>
                  <div className="ms-auto " >
-                    <DatePickercom  />
-                    </div>
-                    <div>
-                        <DatePickercom />
-                    </div>
+                     <DatePickercom />
+                 </div>
+                 <div>
+                     <DatePickercom />
+                 </div>
              </Stack>
         </>
     )

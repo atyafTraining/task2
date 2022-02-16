@@ -4,8 +4,12 @@ import { useEffect, useState } from 'react'
 import { Stack } from 'react-bootstrap'
 import React from 'react';
 export default function SideBarNavLink() {
+
     const TotalList = [
-        { icon: "Dashboard.svg", name: "Dashboard", list: ["Line Chart.", "Vertical Bar Chart.", "Horizontal Bar Chart.","Donut.","Funnel."] },
+        {
+            icon:"Dashboard.svg",
+            name: "Dashboard",
+            list: ["Line Chart.", "Vertical Bar Chart.", "Horizontal Bar Chart.","Donut.","Funnel."] },
         { icon: "Analytics.svg", name: "Analytics", list: null },
         { icon: "Invoice.svg", name: "Invoice", list: ["1", "2", "3"] },
         { icon: "Schedule.svg", name: "Schedule", list: ["1", "2", "3"] },
@@ -14,6 +18,7 @@ export default function SideBarNavLink() {
         { icon: "Notification.svg", name: "Notification", list: null },
         { icon: "Setting.svg", name: "Settings", list: ["1", "2", "3"] },
     ]
+
 
     useEffect(() => {
         const navItem = document.querySelectorAll('.mainSidebar .nav > ul > li');
@@ -37,7 +42,9 @@ export default function SideBarNavLink() {
                                 <Nav.Item as="li" className='mt-4'>
                                     <Stack direction="horizontal">
                                         <Image src={iconpath} width={16} height={16} className="me-3" />
+                                        {/*<span>{i.icon}</span>*/}
                                         <span>{i.name}</span>
+
                                     </Stack>
                                     {i.list
                                         && <ul >
@@ -46,7 +53,7 @@ export default function SideBarNavLink() {
                                                     function ListUl(y)
                                                     {
                                                         return (<>
-                                                            <li className='text-start mt-1 fs-6 ps-2'>{y}</li>
+                                                            <li className='text-start  fs-6 ps-4'>{y}</li>
                                                         </>)
                                                     }
                                                 )
