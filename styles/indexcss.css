@@ -27,14 +27,12 @@
     background-color: #FFFFFF;
     width: var(--widthsidebarvar);
 }
-
-
+.item:hover,.item.active{
+    background: linear-gradient(to right, rgba(172, 169, 255, 1),rgba(172, 169, 255, 0))
+}
 .paddingsidebar{
     padding: 24px 24px 24px calc(var(--widthsidebarvar) + 24px);
-
 }
-
-
 .userAccount{
     font-size: 10px;
     font-family: 'Nunito', sans-serif;
@@ -69,3 +67,93 @@
 .Top1:not(:last-child) {
     border-bottom: 1px solid #b4b4b66c ;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mainSidebar {
+    width: 218px;
+}
+.sidebar-active .mainSidebar {
+    width: 80px;
+    height: 925px;
+    border-radius: 20px;
+    margin: 24px;
+}
+.sidebar-active .user1{
+    padding: 0!important;
+    display: flex;
+    flex-direction:column !important;
+    padding: 20px!important;
+}
+.sidebar-active .user2 {
+    display: none;
+}
+.user1 {
+    display: flex;
+    padding: 0!important;
+    flex-direction:row !important;
+    padding: 20px!important;
+}
+
+.sidebar-active .item1 {
+    display: none;
+}
+.sidebar-active .item1 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-active .paddingsidebar  {
+    padding-left: 128px !important;
+}
+.sidebar-active .user-small{
+    display: block;
+}
+.user-small,.sidebar-active .user-large ,.sidebar-active .ullist{
+    display: none;
+}
+.base-active {
+    padding-left: 20px!important;
+}
+.sidebar-active .base-active {
+    padding-left: 0px!important;
+}
+.sidebar-active .icon1 {
+    position:absolute;
+    top: 20px;
+    left: 30px;
+}
+.icon1 {
+    position:absolute;
+    top: 50px;
+    right: 10px;
+}
+
+

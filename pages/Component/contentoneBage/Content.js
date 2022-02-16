@@ -19,8 +19,6 @@ export default function Content() {
              <Topfixid />
              <TitelTop />
 
-                 {/*<div className="ps-5 w-50" style={{marginLeft:"155px"}}></div>*/}
-
 
              <Row className="g-4">
                  <Col xs={12} md={8} >

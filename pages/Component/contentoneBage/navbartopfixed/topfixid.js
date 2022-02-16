@@ -7,15 +7,20 @@ import DatePickercom from "./Date";
 export default function Topfixid() {
     return (
         <>
-             <Stack direction="horizontal"  gap={3}>
-                 <div className="pt-4 ms-3 "><h3>Dashboard</h3></div>
-                 <div className="ms-auto " >
-                     <DatePickercom />
-                 </div>
-                 <div>
-                     <DatePickercom />
-                 </div>
-             </Stack>
+            <Row className="mb-4">
+                <Col sm={12} md >
+                    <h3>Dashboard</h3>
+
+                </Col>
+                <Col xs="auto">
+                    <DatePickercom />
+
+                </Col>
+                <Col xs="auto" className="ms-auto ms-md-0">
+                    <DatePickercom />
+                </Col>
+
+            </Row>
         </>
     )
 }
