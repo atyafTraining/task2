@@ -9,7 +9,7 @@ import Content from "./Component/contentoneBage/Content";
 
 export default function Home() {
     useEffect(()=>{
-        let classes=sessionStorage.getItem("ExpandBar")
+        let classes=localStorage.getItem("ExpandBar")
         document.querySelector("body").classList=classes
     })
     return (
@@ -23,17 +23,3 @@ export default function Home() {
         </>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

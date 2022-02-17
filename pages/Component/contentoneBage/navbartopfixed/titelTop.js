@@ -1,5 +1,6 @@
 import { Col, Container, Row, Stack } from "react-bootstrap";
 import Image from 'next/image'
+import Panel from "../Panel";
 
 export function TitelTop() {
     const Data = [
@@ -31,14 +32,17 @@ export function TitelTop() {
                     function X(item) {
                         return (
                             <>
+
                                 <Col xs={12} md={6} lg>
-                                    <Stack className=" align-items-center gap-3  bg-white p-4  "  direction="horizontal" >
-                                        <Image src={"/imges/icon/" + item.icon} width={60} height={60} />
-                                        <div>
-                                            <h3 className="mb-0 fw-bold">{item.Number}</h3>
-                                            <p className="mb-0 opacity-50">{item.name}</p>
-                                        </div>
-                                    </Stack>
+                                    <Panel>
+                                        <Stack className=" align-items-center gap-3  bg-white p-4  "  direction="horizontal" >
+                                            <Image src={"/imges/icon/" + item.icon} width={60} height={60} />
+                                            <div>
+                                                <h3 className="mb-0 fw-bold">{item.Number}</h3>
+                                                <p className="mb-0 opacity-50">{item.name}</p>
+                                            </div>
+                                        </Stack>
+                                    </Panel>
                                 </Col>
 
                             </>

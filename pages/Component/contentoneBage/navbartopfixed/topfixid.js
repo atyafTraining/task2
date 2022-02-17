@@ -7,10 +7,9 @@ import DatePickercom from "./Date";
 export default function Topfixid() {
     return (
         <>
-            <Row className="mb-4">
-                <Col sm={12} md >
-                    <h3>Dashboard</h3>
-
+            <Row className="mb-4 align-items-center">
+                <Col sm={12} md>
+                    <h3 className="m-0">Dashboard</h3>
                 </Col>
                 <Col xs={6} md={"auto"}>
                     <DatePickercom />

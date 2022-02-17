@@ -22,8 +22,8 @@ export default function Content() {
 
              <Row className="g-4">
                  <Col xs={12} md={8} >
-                       <Panel header="Reports" className="h-100 p-4">
-                           <PureComponent />
+                       <Panel header="Reports" className="h-100  pt-0 pb-4 pe-4 ps-4">
+                           <div className="pt-4"><PureComponent /></div>
                        </Panel>
 
                  </Col>

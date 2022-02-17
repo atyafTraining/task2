@@ -49,7 +49,7 @@ export default function Sidebarfooter() {
                         </svg>
                     </div>
                 </Stack>
-                <div gap={2}  className="user-small m-3">
+                <div gap={2}  className="user-small text-center justify-content-center align-content-center m-3">
                     <div className="" style={{backgroundImage:"url('/imges/users/Rectangle 114.png')" ,backgroundRepeat: "no-repeat"}}>
                         <Image src="/imges/users/Rectangle 115.png" width={45} height={43}/>
                     </div>

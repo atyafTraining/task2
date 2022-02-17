@@ -7,7 +7,7 @@ export default function Sidebarnavlinkes() {
     return (
 <>
 
-     <div className="overflow-hidden" style={{flex:"1 0 0"}}>
+     <div className="scrol" style={{flex:"1 0 0",overflowX:"hidden",overflowY:"auto"}}>
         <Nav defaultActiveKey="/home" className="flex-column">
             <SideBarNavLink  />
         </Nav>

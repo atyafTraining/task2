@@ -4,7 +4,7 @@ import Image from "react-bootstrap/Image";
 export default function Sidebarlogo() {
     return (
         <>
-            <a href="#" className="text-black pt-4 align-bottom  justify-content-center align-content-center text-center " >
+            <a className="text-black pt-4 align-bottom  justify-content-center align-content-center text-center " >
                 <h1>
                     <Image src="/imges/logo/logo.png" className="pe-2"/>
 
