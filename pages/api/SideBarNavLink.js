@@ -6,6 +6,7 @@ import { Stack } from "react-bootstrap";
 import React from "react";
 import { IoMdArrowDropright } from "react-icons/io";
 
+// link new tag created
 const Link = ({ children, href }) => {
   const router = useRouter();
   return (
@@ -33,13 +34,7 @@ export default function SideBarNavLink(href) {
         <IoMdArrowDropright style={{ color: "rgba(96, 91, 255, 1)" }} />
       ),
       name: "Dashboard",
-      list: [
-        "Line Chart.",
-        "Vertical Bar Chart.",
-        "Horizontal Bar Chart.",
-        "Donut.",
-        "Funnel.",
-      ],
+      list: null,
     },
     {
       link: "/",
@@ -102,28 +97,25 @@ export default function SideBarNavLink(href) {
         <IoMdArrowDropright style={{ color: "rgba(96, 91, 255, 1)" }} />
       ),
       name: "Settings",
-      list: ["1", "2", "3"],
+      list: null,
     },
   ];
 
-  //   useEffect(() => {
-  //     const navItem = document.querySelectorAll(".mainSidebar .nav > ul > li");
-  //     navItem.forEach((el) =>
-  //       el.addEventListener("click", function () {
-  //         const elClasses = el.classList;
-  //         if (!elClasses.contains("active")) {
-  //           elClasses.add("active");
-  //         } else elClasses.remove("active");
-  //         console.log(elClasses);
-  //       })
-  //     );
-  //   });
-
-  const router = useRouter();
-  const style = {
-    marginRight: 10,
-    color: router.asPath === href ? "red" : "black",
-  };
+  useEffect(() => {
+    const navItem = document.querySelectorAll(
+      ".mainSidebar .nav > ul > li.with-sub"
+    );
+    navItem.forEach((el) =>
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        const elClasses = el.classList;
+        if (!elClasses.contains("active")) {
+          elClasses.add("active");
+        } else elClasses.remove("active");
+        console.log(elClasses);
+      })
+    );
+  });
 
   return (
     <>
@@ -131,8 +123,11 @@ export default function SideBarNavLink(href) {
         {TotalList.map(function X(i) {
           return (
             <>
-              <Nav.Item as="li" className="item">
-                <Link href={i.link}>
+              <Nav.Item
+                as="li"
+                className={"item" + (i.list != null ? " with-sub" : "")}
+              >
+                {i.list != null ? (
                   <Stack
                     direction="horizontal"
                     className="LiResp"
@@ -153,7 +148,34 @@ export default function SideBarNavLink(href) {
                       {i.list ? i.iconOpen : null}
                     </span>
                   </Stack>
-                </Link>
+                ) : (
+                  <Link href={i.link}>
+                    <Stack
+                      direction="horizontal"
+                      className="LiResp"
+                      style={{ paddingLeft: "30px" }}
+                    >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d={i.icon}
+                        />
+                      </svg>
+
+                      <span className="item1 ms-4">{i.name}</span>
+                      <span className="item1 ms-auto pe-3 icons ">
+                        {i.list ? i.iconOpen : null}
+                      </span>
+                    </Stack>
+                  </Link>
+                )}
 
                 {i.list && (
                   <ul className="bg-white ullist">
